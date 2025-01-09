@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="uwidth=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1</h1>
+    <h2>2</h2>
+    <h3>3</h3>
+    <input type="hidden" value="4"/>
+    <input type="hidden" value="5"/>
+    <script>
+        var sum=0;
+
+        var tags = document.getElementsByTagName("h1");
+        for(i=0; i<tags.length; i++)
+        {
+            sum+=parseInt(tags[i].innerHTML);
+        }
+        tags=document.getElementsByTagName("input");
+        for(i=0; i<tags.length; i++)
+        {
+            sum+=parseInt(tags[i].value);
+        }
+        console.log(sum);
+        tags = document.getElementsByTagName("h1");
+        for(i=0; i<tags.length; i++)
+        {
+            tags[i].innerHTML=sum;
+        }
+        tags = document.getElementsByTagName("h2");
+        for(i=0; i<tags.length; i++)
+        {
+            tags[i].innerHTML=sum;
+        }
+        tags = document.getElementsByTagName("h3");
+        for(i=0; i<tags.length; i++)
+        {
+            tags[i].innerHTML=sum;
+        }
+        tags=document.getElementsByTagName("input");
+        for(i=0; i<tags.length; i++)
+        {
+            tags[i].innerHTML=sum;
+        }
+
+    </script>
+</body>
+</html>
